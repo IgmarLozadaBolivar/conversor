@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://app.embed.im/snow.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/confetti-js"></script>
+</head>
+
+<body>
+  <!-- Seccion: Inicio -->
+  <section id="seccion1">
+    <!-- Navbar & DropDown -->
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">MathMaster</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#grados">CelsiusToFahrenheit</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#distancia">MetrosToPies</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Mas
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#peso">KilogramosToLibras</a>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- Video de Fondo -->
+    <div id="videoContenedor">
+      <video id="videoFondo" autoplay loop muted></video>
+      <div id="contenido">
+        <h1>Inicio</h1>
+        <p class="p">
+          Potencia tus calculos con nuestras calculadoras, operaciones matematicas, conversiones de unidades y
+          mas. Resultados rapidos y precisos. <br>
+          ¡Optimiza tus operaciones con nuestra ayuda!
+        </p>
+      </div>
+  </section>
+
+  <!-- Salto de linea en cada seccion -->
+  <div id="grados" class="logo-seccion">
+    <h1>CelsiusToFahrenheit</h1>
+  </div>
+
+  <section id="seccion2">
+    <div id="conversion">
+      <label for="temperatura">Temperatura (Celsius):</label>
+      <input type="number" id="temperatura">
+      <button onclick="convertirTemperatura()">Convertir</button>
+      <canvas id="confetti-canvas"></canvas>
+      <span id="resultadoTemperatura"></span>
+    </div>
+  </section>
+
+  <!-- Salto de linea en cada seccion -->
+  <div id="distancia" class="logo-seccion">
+    <h1>MetrosToPies</h1>
+  </div>
+
+  <section id="seccion3">
+    <div id="conversion">
+      <label for="distancia">Distancia (metros):</label>
+      <input type="number" id="distancia">
+      <button onclick="convertirDistancia()">Convertir</button>
+      <span id="resultadoDistancia"></span>
+      <canvas id="confetti-canvas"></canvas>
+    </div id="conversion">
+  </section>
+
+  <!-- Salto de linea en cada seccion -->
+  <div id="peso" class="logo-seccion">
+    <h1>KilogramosToLibras</h1>
+  </div>
+
+  <section id="seccion4">
+    <div id="conversion">
+      <label for="peso">Peso (kilogramos):</label>
+      <input type="number" id="peso">
+      <button onclick="convertirPeso()">Convertir</button>
+      <span id="resultadoPeso"></span>
+      <canvas id="confetti-canvas"></canvas> 
+    </div>
+  </section>
+
+  <!-- Pie de pagina -->
+  <div class="footer">
+    <p>
+      Copyright &copy; All Rights Reserved | Designed
+      <span class="span"> By Igmar L. Bolivar </span>
+      | 2023
+    </p>
+  </div>
+
+  <script src="conversor.js" type="module"></script>
+  <!-- Scripts, CDN o CDNJS de librerias externas (JQuery, Popper and Boostrap (versiones anteriores)) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
